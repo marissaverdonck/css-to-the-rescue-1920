@@ -16,7 +16,7 @@ h1 {
   width: 100%;
   white-space: pre;
   text-shadow: 5px 5px #ff0000;
-  /* animation: move 9s linear infinite; */
+  animation: move 9s linear infinite;
   padding: .5em 1em .3em 1em;
   margin: 0;
 }
