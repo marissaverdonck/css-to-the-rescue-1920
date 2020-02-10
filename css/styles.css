@@ -1,6 +1,5 @@
 body {
   background: linear-gradient(217deg, rgba(126, 28, 220, 0.74), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(255, 0, 154, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(255, 249, 0, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  height: 100vw;
   margin: 0;
 }
 
@@ -16,8 +15,8 @@ h1 {
   width: 100%;
   white-space: pre;
   text-shadow: 5px 5px #ff0000;
-  /* animation: move 9s linear infinite; */
-  padding: .5em 1em .3em 1em;
+  animation: move 9s linear infinite;
+  padding: .1em 1em .3em 1em;
   margin: 0;
 }
 
@@ -33,7 +32,7 @@ header {
 }
 
 .allLifts {
-  stroke: #ffff00;
+  stroke: magenta;
   stroke-width: 2px;
   fill: none;
 }
@@ -48,7 +47,7 @@ header {
 }
 
 .lift:hover {
-  stroke: red;
+  stroke: mediumpurple;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
@@ -97,10 +96,10 @@ header {
 
 @keyframes move {
   from {
-    transform: translateX(90%);
+    transform: translateX(100%);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-90%);
   }
 }
 
