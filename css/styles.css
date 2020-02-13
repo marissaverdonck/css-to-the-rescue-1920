@@ -1,71 +1,283 @@
+@font-face {
+  font-family: Galada;
+  src: url('Galada-Regular.ttf')
+}
+
+@font-face {
+  font-family: Fugaz;
+  src: url('FugazOne-Regular.ttf')
+}
+
+@font-face {
+  font-family: Knewave;
+  src: url('Knewave-Regular.ttf')
+}
+
 body {
-  background: linear-gradient(217deg, rgba(126, 28, 220, 0.74), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(255, 0, 154, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(255, 249, 0, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  /* background: linear-gradient(217deg, rgba(126, 28, 220, 0.74), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(255, 0, 154, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(255, 249, 0, 0.8), rgba(0, 0, 255, 0) 70.71%); */
   margin: 0;
+  height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  margin: 1em 0;
+  padding-bottom: 35%;
+  position: relative;
+}
+
+input[value="header"]:checked~main,
+input[value="header"]:checked~footer,
+input[value="header"]:checked,
+input[value="header"]:checked~label:nth-of-type(1) {
+  display: none;
+}
+
+input[value="main"]:checked~header,
+input[value="main"]:checked,
+input[value="main"]:checked~label:nth-of-type(2) {
+  display: none;
+}
+
+input[value="header"]:checked~label:nth-of-type(2) {
+  background: -webkit-linear-gradient(#f5b338, #ea54b2);
+  background: -webkit-linear-gradient(#eac805, #f5a138);
+  padding: 0em .5em;
+  text-align: center;
+  font-size: 8vw;
+  font-family: Knewave, sans-serif;
+  /* border: 4px dashed #3f2770; */
+  position: absolute;
+  left: 15%;
+  top: 58vw;
+  right: 15%;
+  width: 65%;
+  height: 1em;
+  z-index: 5;
+  color: #af357f;
+  box-shadow: 5px 10px 18px #4b2972;
+  line-height: 0;
+  display: flex;
+  animation: fontbulger 1s linear infinite;
+  text-shadow: 2px 2px rgb(63, 39, 112);
+  animation: bigger ease 4s, fontbulger 1s linear infinite;
+}
+
+input[value="header"]:checked~input[value="main"] {
+  padding: 0 9em;
+  opacity: 0;
+  width: 73%;
+  position: absolute;
+  left: 15%;
+  top: 58vw;
+  right: 15%;
+  height: 3em;
+  z-index: 100;
 }
 
 h1 {
+  /* background: -webkit-linear-gradient(#ea54b2, #f5b338); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  font-size: 8vw;
+  font-family: Fugaz, sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  background: black;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  margin: 5%;
+  padding: 0 .2em;
+}
+
+h2 {
+  /* color: white; */
+  /* Fallback: assume this color ON TOP of image */
+  /* background: url(/img/backgroundText.png) repeat; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  /* background-size: 6em; */
+  font-size: 13vw;
+  font-family: Knewave;
+  font-weight: 900;
+  color: #10b0b1;
+  transform: rotate(-15deg);
+  margin: -.3em 0 0 2%;
+  padding: 0;
+  display: block;
+  text-shadow: 2px 2px rgb(63, 39, 112);
+  position: absolute;
+  z-index: 1;
+}
+
+h4 {
   font-family: sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  color: turquoise;
-  font-size: 5em;
+  color: #eac805;
+  font-size: 8em;
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color: yellow;
+  text-decoration-color: #c63f8b;
   width: 100%;
   white-space: pre;
-  text-shadow: 5px 5px #ff0000;
+  text-shadow: 5px 5px #3f2770;
   animation: move 9s linear infinite;
   padding: .1em 1em .3em 1em;
   margin: 0;
 }
 
-svg {
-  margin: 5em 1em;
+main {
+  background-color: tomato;
 }
 
 header {
-  background-color: mediumpurple;
+  animation: bigger ease 4s;
+}
+
+header svg {
+  position: absolute;
+  top: 10%;
+  padding: 0;
+  margin: 0;
+  width: 70vw;
+  height: auto;
+  z-index: 0;
+  left: 20%;
+}
+
+header .cls-1,
+.cls-6 {
+  fill: none;
+}
+
+header .cls-2 {
+  fill: #eac805;
+}
+
+header .cls-3 {
+  fill: #3f2770;
+}
+
+header .cls-4 {
+  clip-path: url(#clip-path);
+}
+
+header .cls-5 {
+  fill: #c63f8b;
+}
+
+header .cls-6 {
+  stroke: #792063;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+main svg {
+  margin: 5em 1em;
+}
+
+footer {
+  background-color: #0eb0b1;
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-.allLifts {
+main .allLifts line {
   stroke: magenta;
   stroke-width: 2px;
   fill: none;
 }
 
-.lift circle {
-  stroke-width: 2px;
+main .lift circle {
+  stroke-width: 4px;
+  stroke: magenta;
+  fill: none;
 }
 
-.allLifts line {
+main .allLifts line {
   stroke-dasharray: 5;
   fill: none;
 }
 
-.lift:hover {
+
+/* main .lift:hover {
   stroke: mediumpurple;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear;
+} */
+
+input[value="lift1"]:checked~#mountain #lift1 line {
+  stroke: cyan;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
 
-.allMountainlines {
+input[value="lift2"]:checked~#mountain #lift2 line {
+  stroke: cyan;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear;
+}
+
+input[value="lift3"]:checked~#mountain #lift3 line {
+  stroke: cyan;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear;
+}
+
+input[value="lift4"]:checked~#mountain #lift4 line {
+  stroke: cyan;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear;
+}
+
+
+/* main input[value="lift1"]:checked~svg {
+  display: none;
+  opacity: 0; */
+
+
+/* stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear; */
+
+main svg a:focus .lift {
+  stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear;
+}
+
+main svg a:active .lift {
+  stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-dasharray: 5;
+  animation: dash 40s linear;
+}
+
+main .allMountainlines {
   stroke: #ffffff;
   stroke-linecap: round;
   fill: none;
 }
 
-.mountainline {
+main .mountainline {
   stroke: #ffffff;
   stroke-linecap: round;
   fill: none;
 }
 
-.mountainline:hover {
+main .mountainline:hover {
   stroke: aquamarine;
   stroke-width: 4px;
   /* stroke-dasharray: 100;
@@ -73,22 +285,22 @@ header {
   animation: run 10s linear forwards infinite; */
 }
 
-.forbiddenarea {
+main .forbiddenarea {
   fill: none;
   stroke: red;
   stroke-width: 1px;
 }
 
-.forbiddenarea path {
+main .forbiddenarea path {
   stroke-width: 3px;
 }
 
-.mountainBack {
+main .mountainBack {
   fill: #ffffff;
   opacity: 0.39;
 }
 
-.mountainBackLine {
+main .mountainBackLine {
   stroke: #ffffff;
   fill: none;
   stroke-width: 3px;
@@ -112,5 +324,33 @@ header {
 @keyframes run {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes fontbulger {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes bigger {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
