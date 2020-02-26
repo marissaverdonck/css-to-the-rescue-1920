@@ -16,7 +16,8 @@
 body {
   /* background: linear-gradient(217deg, rgba(126, 28, 220, 0.74), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(255, 0, 154, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(255, 249, 0, 0.8), rgba(0, 0, 255, 0) 70.71%); */
   margin: 0;
-  height: 100vh;
+  position: relative;
+  /* height: 100vh; */
 }
 
 header {
@@ -35,10 +36,31 @@ input[value="header"]:checked~label:nth-of-type(1) {
 
 input[value="main"]:checked~header,
 input[value="main"]:checked,
-input[value="main"]:checked~label:nth-of-type(2) {
+input[value="main"]:checked~label:nth-of-type(2),
+input[value="main"]:checked~input {
   display: none;
 }
 
+body input[value="header"]:nth-of-type(1) {
+  position: absolute;
+  right: .5em;
+  z-index: 5;
+  width: 3em;
+  opacity: 0;
+}
+
+body label[for="header"]:nth-of-type(1) {
+  position: absolute;
+  right: .5em;
+  color: #c54693;
+  color: #c54693;
+  font-family: Fugaz, sans-serif;
+  text-transform: uppercase;
+}
+
+
+}
+body:target {}
 input[value="header"]:checked~label:nth-of-type(2) {
   background: -webkit-linear-gradient(#f5b338, #ea54b2);
   background: -webkit-linear-gradient(#eac805, #f5a138);
@@ -47,6 +69,7 @@ input[value="header"]:checked~label:nth-of-type(2) {
   font-size: 8vw;
   font-family: Knewave, sans-serif;
   /* border: 4px dashed #3f2770; */
+  
   position: absolute;
   left: 15%;
   top: 58vw;
@@ -62,7 +85,6 @@ input[value="header"]:checked~label:nth-of-type(2) {
   text-shadow: 2px 2px rgb(63, 39, 112);
   animation: bigger ease 4s, fontbulger 1s linear infinite;
 }
-
 input[value="header"]:checked~input[value="main"] {
   padding: 0 9em;
   opacity: 0;
@@ -74,11 +96,11 @@ input[value="header"]:checked~input[value="main"] {
   height: 3em;
   z-index: 100;
 }
-
 h1 {
   /* background: -webkit-linear-gradient(#ea54b2, #f5b338); */
   /* -webkit-background-clip: text; */
   /* -webkit-text-fill-color: transparent; */
+  
   font-size: 8vw;
   font-family: Fugaz, sans-serif;
   font-weight: 900;
@@ -91,7 +113,6 @@ h1 {
   margin: 5%;
   padding: 0 .2em;
 }
-
 h2 {
   /* color: white; */
   /* Fallback: assume this color ON TOP of image */
@@ -99,6 +120,7 @@ h2 {
   /* -webkit-background-clip: text; */
   /* -webkit-text-fill-color: transparent; */
   /* background-size: 6em; */
+  
   font-size: 13vw;
   font-family: Knewave;
   font-weight: 900;
@@ -111,13 +133,12 @@ h2 {
   position: absolute;
   z-index: 1;
 }
-
 h4 {
   font-family: sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  color: #eac805;
-  font-size: 8em;
+  color: #0eb0b1;
+  font-size: 15vh;
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #c63f8b;
@@ -128,15 +149,12 @@ h4 {
   padding: .1em 1em .3em 1em;
   margin: 0;
 }
-
 main {
-  background-color: tomato;
+  background-color: #ffffff;
 }
-
 header {
   animation: bigger ease 4s;
 }
-
 header svg {
   position: absolute;
   top: 10%;
@@ -147,63 +165,59 @@ header svg {
   z-index: 0;
   left: 20%;
 }
-
 header .cls-1,
 .cls-6 {
   fill: none;
 }
-
 header .cls-2 {
   fill: #eac805;
 }
-
 header .cls-3 {
   fill: #3f2770;
 }
-
 header .cls-4 {
   clip-path: url(#clip-path);
 }
-
 header .cls-5 {
   fill: #c63f8b;
 }
-
 header .cls-6 {
   stroke: #792063;
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 3px;
 }
-
-main svg {
-  margin: 5em 1em;
+main {
+  background-image: url(/img/backgroundPurple_Tekengebied\ 1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1em 1em 5em 1em;
 }
 
-footer {
-  background-color: #0eb0b1;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+/* mountain */
+main svg:nth-of-type(1) {
+  margin: 0em 1em 0 1em;
+  position: relative;
+  z-index: 1;
 }
-
 main .allLifts line {
-  stroke: magenta;
-  stroke-width: 2px;
+  stroke: #c54693;
+  stroke-width: 3px;
   fill: none;
-}
-
-main .lift circle {
-  stroke-width: 4px;
-  stroke: magenta;
-  fill: none;
-}
-
-main .allLifts line {
   stroke-dasharray: 5;
+}
+main .lift circle {
+  stroke-width: 3px;
+  stroke: #c54693;
   fill: none;
 }
-
+main form {
+  background-color: #111111;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* main .lift:hover {
   stroke: mediumpurple;
@@ -211,72 +225,116 @@ main .allLifts line {
   stroke-dasharray: 5;
   animation: dash 40s linear;
 } */
-
-input[value="lift1"]:checked~#mountain #lift1 line {
+main input[value="lift1"]:checked~#mountain #lift1 line {
   stroke: cyan;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
-
-input[value="lift2"]:checked~#mountain #lift2 line {
+main input[value="lift1"]:checked~#mountain #lift1 circle {
+  stroke: cyan;
+  stroke-width: 4px;
+}
+main input[value="lift1"]:checked~label:nth-of-type(1) {
+  border: 3px solid #0eb0b1;
+  color: #eac805;
+}
+main input[value="lift2"]:checked~#mountain #lift2 line {
   stroke: cyan;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
-
-input[value="lift3"]:checked~#mountain #lift3 line {
+main input[value="lift2"]:checked~#mountain #lift2 circle {
+  stroke: cyan;
+  stroke-width: 4px;
+}
+main input[value="lift2"]:checked~label:nth-of-type(2) {
+  border: 3px solid #0eb0b1;
+  color: #eac805;
+}
+main input[value="lift3"]:checked~#mountain #lift3 line {
   stroke: cyan;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
-
-input[value="lift4"]:checked~#mountain #lift4 line {
+main input[value="lift3"]:checked~#mountain #lift3 circle {
+  stroke: cyan;
+  stroke-width: 4px;
+}
+main input[value="lift3"]:checked~label:nth-of-type(3) {
+  border: 3px solid #0eb0b1;
+  color: #eac805;
+}
+main input[value="lift4"]:checked~#mountain #lift4 line {
   stroke: cyan;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
-
+main input[value="lift4"]:checked~#mountain #lift4 circle {
+  stroke: cyan;
+  stroke-width: 4px;
+}
+main input[value="lift4"]:checked~label:nth-of-type(4) {
+  border: 3px solid #0eb0b1;
+  color: #eac805;
+}
+main input {
+  opacity: 0;
+  position: absolute;
+  left: 1em;
+  width: 18em;
+  height: 3.5em;
+  z-index: 5;
+}
+main label {
+  position: relative;
+  display: block;
+  background-color: #111111;
+  color: #ffffff;
+  width: 8em;
+  padding: .5em 1em;
+  font-family: Fugaz, sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #ffffff;
+  background: black;
+  text-transform: uppercase;
+  margin-top: .1em;
+}
 
 /* main input[value="lift1"]:checked~svg {
   display: none;
   opacity: 0; */
 
-
 /* stroke: #ffffff;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear; */
-
 main svg a:focus .lift {
   stroke: #ffffff;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
-
 main svg a:active .lift {
   stroke: #ffffff;
   stroke-width: 4px;
   stroke-dasharray: 5;
   animation: dash 40s linear;
 }
-
 main .allMountainlines {
   stroke: #ffffff;
   stroke-linecap: round;
   fill: none;
 }
-
 main .mountainline {
   stroke: #ffffff;
   stroke-linecap: round;
   fill: none;
 }
-
 main .mountainline:hover {
   stroke: aquamarine;
   stroke-width: 4px;
@@ -284,72 +342,98 @@ main .mountainline:hover {
   stroke-dashoffset: 200;
   animation: run 10s linear forwards infinite; */
 }
-
 main .forbiddenarea {
   fill: none;
-  stroke: red;
+  stroke: #ff4500;
   stroke-width: 1px;
 }
-
 main .forbiddenarea path {
   stroke-width: 3px;
 }
-
 main .mountainBack {
-  fill: #ffffff;
-  opacity: 0.39;
+  fill: #10b0b1;
 }
-
 main .mountainBackLine {
   stroke: #ffffff;
   fill: none;
   stroke-width: 3px;
 }
 
+/* sun */
+main svg:nth-of-type(2) {
+  position: absolute;
+  left: 13vw;
+  top: 7em;
+  width: 35%;
+  z-index: 0;
+}
+main svg:nth-of-type(2) g:nth-of-type(1) circle {
+  fill: #eac805;
+}
+main svg:nth-of-type(2) g:nth-of-type(2) circle {
+  fill: none;
+  stroke: #eac805;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 7px;
+}
+main svg:nth-of-type(2) g:nth-of-type(2) circle {
+  stroke-dasharray: 30;
+}
+main svg:nth-of-type(2) g:nth-of-type(2):nth-of-type(2) circle:nth-of-type(2) {
+  stroke-dasharray: 49;
+}
+footer {
+  background-color: #eac805;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
 @keyframes move {
   from {
     transform: translateX(100%);
   }
+  
   to {
     transform: translateX(-90%);
   }
 }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 1000;
   }
 }
-
 @keyframes run {
   to {
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes rotate {
   from {
     transform: rotateY(0deg);
   }
+  
   to {
     transform: rotateY(360deg);
   }
 }
-
 @keyframes fontbulger {
   0%,
   100% {
     transform: rotate(-2deg);
   }
+  
   50% {
     transform: rotate(2deg);
   }
 }
-
 @keyframes bigger {
   0% {
     opacity: 0%;
   }
+  
   100% {
     opacity: 100%;
   }
