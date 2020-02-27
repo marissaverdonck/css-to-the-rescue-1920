@@ -5,7 +5,7 @@
 ## Table of Content
 - [Description](#Description)
 - [Demo](#Demo)
-- [Install Project(#Install-project)
+- [Install Project](#Install-project)
 - [Used contexts](#Used-contexts)
 - [Restrictions](#Restrictions)
 - [Sources](#Sources)
@@ -47,7 +47,7 @@ The CSS contexts that I have used or did research for:
 - [x] Selectors
 
 ## Wishlist
-- [ ] hover over ski piste and show name
+- [ ] Hover over ski piste and show name
 - [ ] Show the moon at night time
 
 ## License
