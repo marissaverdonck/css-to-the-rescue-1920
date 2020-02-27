@@ -1,5 +1,11 @@
 # CSS to the Rescue @cmda-minor-web 19-20
 
+- Set off animations
+- SVG
+- Time
+
+
+
 _This course is in English_
 
 In this three week course you are going to create an innovative, experimantal, yet pleasurable user experience by using CSS and SVG. No Javascrpt allowed.
@@ -64,5 +70,6 @@ Goals: Blow us away.
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 
 
-- [ ] 
-- [x]
+[ ] 
+[x] 
+
