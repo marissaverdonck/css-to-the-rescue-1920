@@ -8,7 +8,7 @@ Ik heb me gehouden aan de volgende beperkingen
 
 
 
-_This course is in English_
+
 
 In this three week course you are going to create an innovative, experimantal, yet pleasurable user experience by using CSS and SVG. No Javascrpt allowed.
 
