@@ -66,9 +66,9 @@
           font-family: Knewave, sans-serif;
           /* border: 4px dashed #3f2770; */
           position: absolute;
-          left: 15%;
+          left: 27%;
           /* bottom: 58vw; */
-          top: 95vh;
+          top: 85vh;
           width: 50%;
           height: 1em;
           z-index: 5;
@@ -82,8 +82,8 @@
         
         body input[value="header"]:checked~input[value="main"] {
           position: absolute;
-          left: 15%;
-          top: 90vh;
+          left: 25%;
+          top: 85vh;
           width: 55%;
           height: 5em;
           z-index: 6;
@@ -94,11 +94,10 @@
         header {
           animation: bigger ease 4s;
           background-color: #ffffff;
-          margin: 1em auto;
+          margin: 0em auto;
           position: relative;
           height: 100vh;
           background-color: #ffffff;
-          margin: 0;
           position: relative;
         }
         
@@ -106,7 +105,7 @@
           /* background: -webkit-linear-gradient(#ea54b2, #f5b338); */
           /* -webkit-background-clip: text; */
           /* -webkit-text-fill-color: transparent; */
-          font-size: 6vw;
+          font-size: 5vw;
           font-family: Fugaz, sans-serif;
           font-weight: 900;
           color: #ffffff;
@@ -119,7 +118,7 @@
           padding: 0 .2em;
           position: absolute;
           top: 5%;
-          left: 10%;
+          left: 15%;
           z-index: 5;
         }
         
@@ -130,7 +129,7 @@
           /* -webkit-background-clip: text; */
           /* -webkit-text-fill-color: transparent; */
           /* background-size: 6em; */
-          font-size: 13vw;
+          font-size: 11vw;
           font-family: Knewave, fantasy;
           font-weight: 900;
           color: #10b0b1;
@@ -142,7 +141,7 @@
           position: absolute;
           z-index: 1;
           top: 13vh;
-          left: 5%;
+          left: 15%;
           right: 5%;
         }
         /* ------ INTRO SVG ------ */
@@ -152,9 +151,9 @@
           top: 5vh;
           padding: 0;
           margin: 0 auto;
-          width: 80vw;
+          width: 60vw;
           z-index: 0;
-          left: 5%;
+          left: 15%;
           right: 5%;
           max-height: 90vh;
         }
