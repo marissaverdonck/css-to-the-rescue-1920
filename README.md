@@ -1,5 +1,7 @@
 # CSS to the Rescue @cmda-minor-web 19-20
 
+## Restrictions
+Ik heb me gehouden aan de volgende beperkingen
 - Set off animations
 - SVG
 - Time
