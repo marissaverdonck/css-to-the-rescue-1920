@@ -1,5 +1,5 @@
 # CSS to the Rescue @cmda-minor-web 19-20
-<img width="954" alt="Schermafbeelding 2020-02-27 om 22 01 32" src="https://user-images.githubusercontent.com/43657951/75486410-c1451b00-59ac-11ea-8443-417c40317052.png">
+![Schermafbeelding 2020-02-27 om 22 01 32](https://user-images.githubusercontent.com/43657951/75488948-8e515600-59b1-11ea-9370-9a38c060feff.png)
 
 
 ## Table of Content
