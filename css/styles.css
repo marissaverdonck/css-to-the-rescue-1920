@@ -14,7 +14,7 @@
         }
         
         * {
-          cursor: url("/img/ski.png"), auto;
+          cursor: url(../img/ski.png), auto;
         }
         
         body {
