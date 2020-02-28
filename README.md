@@ -50,6 +50,12 @@ The CSS contexts that I have used or did research for:
 - [ ] Hover over ski piste and show name
 - [ ] Show the moon at night time
 
+## Sources
+* [Linear gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient)
+* [Keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
+* [Blend mode](https://css-tricks.com/almanac/properties/m/mix-blend-mode/)
+
+
 ## License
 [MIT License](https://github.com/marissaverdonck/css-to-the-rescue-1920/blob/master/license)
 
